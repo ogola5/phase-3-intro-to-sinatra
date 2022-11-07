@@ -1,10 +1,13 @@
 require 'sinatra'
 
 class App < Sinatra::Base
-
-  get '/hello' do
-    '<h2>Hello <em>World</em>!</h2>'
+  
+  get '/games/:id' do
+    games = Game.find(params[:id])
+    game.to_json
   end
+
+
   
 end
 
